@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def sinoptik_temperature_current_kiev():
+def sinoptik_temperature_current_kiev() -> object:
     html = requests.get('https://ua.sinoptik.ua/погода-київ').text
     parsed_html_document = BeautifulSoup(html, 'lxml')      # markup=html
     current_temp = parsed_html_document.find('p', class_='today-temp').text
@@ -15,5 +15,9 @@ def sinoptik_max_temperature_current_day_kiev():
     max_temp = parsed_html_document.find('div', class_='max').text
     return max_temp
 
-print(sinoptik_temperature_current_kiev())
-print(sinoptik_max_temperature_current_day_kiev())
+
+def sinoptik_today_min():
+    html = requests.get('https://ua.sinoptik.ua/погода-київ').text
+    parsed_html_document = BeautifulSoup(markup=html)
+    today_min = parsed_html_document.find('div', class_='min').text
+    return today_min
