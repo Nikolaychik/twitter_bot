@@ -2,10 +2,10 @@ import tweepy
 
 
 configs = {
-    'API KEY': 'TAQvGD5Zpp4CGQPg9mtZfvwEw',
-    'API Secret': '5IXo09UE4PwTdWhnawCKFRAY0YaQ002aQEPHbl4EaW5bpeDN9d',
-    'Access token': '791307645542162432-lZIf24o0TR1VjA1BSUlWVDP5wDpomLN',
-    'Access token secret': 'KqD9KGYxNgS0iYhADrCxbqEC95h6OcPDH6e2u3Tn2uBdm'
+    'API KEY': 'FcuBGT2E2vSusk6rNlSfSUQCc',
+    'API Secret': 'Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2',
+    'Access token': '791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF',
+    'Access token secret': 'yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX'
 }
 
 auth = tweepy.OAuthHandler(consumer_key=configs['API KEY'],
@@ -18,5 +18,6 @@ api = tweepy.API(auth)
 public_tweets = api.home_timeline()
 for tweet in public_tweets:
     print(tweet.text)
-status = "lasldalssssdlasld"
+
+status = "Hello, World!"
 api.update_status(status)
