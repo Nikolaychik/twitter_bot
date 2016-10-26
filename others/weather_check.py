@@ -33,9 +33,5 @@ def sinoptik_today_min():
 
     return today_min
 
-sinoptik_today_min()
-sinoptik_temperature_max_kiev()
-sinoptik_temperature_current_kiev_historyval()
-
 
    
