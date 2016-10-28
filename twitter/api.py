@@ -1,6 +1,4 @@
 import tweepy
-import random
-import string
 
 
 class TwitterBot:
@@ -11,8 +9,16 @@ class TwitterBot:
                               credentials['Access token secret'])
         self.api = tweepy.API(auth)
         
-    def update_status(self, status):
+    def update_status(self, status):    # обновление статуса
+        self.status = status
         self.api.update_status(status)
 
-    def home_timeline(self,):
-        self.api.home_timeline()
+    def all_tweets(self):   # масив из твитов
+        all_tweets = []
+        public_tweets = self.api.home_timeline()
+        for tweet in public_tweets:
+            all_tweets.append(tweet.text)
+
+
+
+
