@@ -21,11 +21,14 @@ class TwitterBot:
 
     def tweets_timeline(self):
         timeline = self.api.user_timeline()
+
+        ##################################
         tweets_list = []
         for tweet in timeline:
             tweets_list.append(tweet.text)
         return tweets_list
-
+        ##################################
+        # Этот код можно существенно сократить с помощью list comprehensions. Оберни все четыре строки в одну
 
 tweety = TwitterBot(configs)
 
