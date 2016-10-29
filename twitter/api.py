@@ -1,14 +1,6 @@
 import tweepy
 
 
-configs = {
-    'API KEY': 'FcuBGT2E2vSusk6rNlSfSUQCc',
-    'API Secret': 'Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2',
-    'Access token': '791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF',
-    'Access token secret': 'yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX'
-}
-
-
 class TwitterBot:
     def __init__(self, credentials):
         auth = tweepy.OAuthHandler(consumer_key=credentials['API KEY'],
@@ -22,6 +14,6 @@ class TwitterBot:
 
     def tweets_timeline(self):
         timeline = self.api.user_timeline()
-        return [tweet.text for tweet in timeline]
+        return [[tweet.text, tweet.id] for tweet in timeline]
 
 # Test comment
