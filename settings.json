@@ -1,6 +1,15 @@
 {
-    "API KEY": "FcuBGT2E2vSusk6rNlSfSUQCc",
-    "API Secret": "Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2",
-    "Access token": "791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF",
-    "Access token secret": "yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX"
+    "default_settings": {
+        "API KEY": "FcuBGT2E2vSusk6rNlSfSUQCc",
+        "API Secret": "Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2",
+        "Access token": "791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF",
+        "Access token secret": "yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX"
+    },
+    "my_settings": {
+        "API KEY": "Rllem9bbCz1uUsPxqJX9kGQL3",
+        "API Secret": "R921e6yIiglgOdtiWLQtFPiNbkdgtUWzYoW4TOjfO9QYGrpPij",
+        "Access token": "792352064491970562-xtdDYYOadkXTie2dTSa1qbgqgho3Sl7",
+        "Access token secret": "sZecwxqiUaDeGPVtepR11LtPooSbGIc9i1uqX8WTQjL83"
+    }
 }
+

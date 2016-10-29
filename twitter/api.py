@@ -13,10 +13,10 @@ class TwitterBot:
         self.api.update_status(status)
 
     def tweets_timeline(self):
-        return [(tweet.text, tweet.id) for tweet in self.api.user_timeline()]
+        timeline = self.api.user_timeline()
+        return [[tweet.text, tweet.id] for tweet in timeline]
 
     def get_ids(self):
         return self.api.followers_ids()
-
 
 # Test comment

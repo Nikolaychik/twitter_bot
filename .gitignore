@@ -2,5 +2,6 @@
 /.idea
 .idea/
 .idea/*
-configs.py
+twitter/configs.py
 settings.json
+main.py
