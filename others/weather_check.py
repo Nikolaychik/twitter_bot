@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
 class WeatherCollector:
     def __init__(self):
         html = requests.get('https://ua.sinoptik.ua/погода-київ').text
@@ -32,4 +31,3 @@ class WeatherCollector:
         day_light_down_time = \
         str(self.parsed_html_document.find('div', class_='infoDaylight').text).strip().split('Захід ')[1]
         return day_light_down_time
-
