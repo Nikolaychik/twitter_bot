@@ -6,3 +6,4 @@ twitter/configs.py
 settings.json
 main.py
 *.xlsx
+configs.py
