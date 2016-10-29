@@ -24,5 +24,19 @@ class TwitterBot:
         self.api.destroy_status(id=cur_id)
 
 
+    def get_ids_followers(self):
+        return self.api.followers_ids()
+
+    def get_ids_friends(self):
+        return self.api.friends_ids()
+
+    def start_follow_my_followers(self, id_list):
+        for user_id in id_list:
+            return self.api.create_friendship(user_id)
+
+    def destroy_friendship(self, id_list):
+        for curr_id in id_list:
+            return self.api.destroy_friendship(curr_id)
+
 # Test comment
 
