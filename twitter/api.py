@@ -24,6 +24,5 @@ class TwitterBot:
         self.api.destroy_status(id=cur_id)
 
 
-
 # Test comment
 
