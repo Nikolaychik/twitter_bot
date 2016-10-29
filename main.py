@@ -1,9 +1,17 @@
-import json
-from twitter.api import TwitterBot
+from twitter import api
+import cinema
 
+bot = api.TwitterBot(api.configs)
+# bot.update_status('Hello, world!')
 
-with open('settings.json') as settings_file:
-    settings = json.loads(settings_file.read())
+tl = bot.tweets_timeline()
+print(tl)
 
-bot = TwitterBot(settings["my_settings"])
-print(bot.tweets_timeline())
+followers_ids = bot.api.followers_ids()
+print(followers_ids)
+
+for follower in followers_ids:
+    print(follower.tweets_timeline())
+
+c = cinema.MovieCollector()
+c.get_actual_movie_list()

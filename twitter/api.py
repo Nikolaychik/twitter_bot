@@ -1,4 +1,9 @@
 import tweepy
+import json
+
+
+with open('settings.json') as config_file:
+    configs = json.load(config_file)
 
 
 class TwitterBot:
@@ -15,5 +20,3 @@ class TwitterBot:
     def tweets_timeline(self):
         timeline = self.api.user_timeline()
         return [[tweet.text, tweet.id] for tweet in timeline]
-
-# Test comment

@@ -4,4 +4,5 @@
 .idea/*
 twitter/configs.py
 settings.json
-
+main.py
+*.xlsx
