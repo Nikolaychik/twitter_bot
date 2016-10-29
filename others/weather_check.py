@@ -8,7 +8,6 @@ def sinoptik_temperature_current_kiev():
     current_temp = parsed_html_document.find('p', class_='today-temp').text
     return current_temp
 
-<<<<<<< .merge_file_NFBksD
 
 def sinoptik_info_day_light_down_time():
     html = requests.get('https://ua.sinoptik.ua/погода-київ').text
@@ -37,16 +36,12 @@ def sinoptik_max_temperature_current_day_kiev():
     max_temp = parsed_html_document.find('div', class_='max').text
     return max_temp
 
-=======
 def sinoptik_east_kiev():
     html = requests.get('https://ua.sinoptik.ua/погода-київ').text
     parsed_html_document = BeautifulSoup(markup=html)
     current_east = parsed_html_document.find(class_='infoDaylight').text
     return current_east
 
-
-sinoptik_east_kiev()
->>>>>>> .merge_file_RjcLMG
 
 def sinoptik_today_min():
     html = requests.get('https://ua.sinoptik.ua/погода-київ').text
@@ -55,7 +50,6 @@ def sinoptik_today_min():
 
     return today_min
 
-<<<<<<< .merge_file_NFBksD
 
 if __name__ == '__main__':
     sinoptik_temperature_current_kiev()
@@ -63,7 +57,4 @@ if __name__ == '__main__':
     sinoptik_today_min()
     sinoptik_temperature_max_kiev()
     sinoptik_temperature_current_kiev_historyval()
-=======
-sinoptik_today_min()
 
->>>>>>> .merge_file_RjcLMG
