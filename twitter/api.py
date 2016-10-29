@@ -21,18 +21,4 @@ class TwitterBot:
 
     def tweets_timeline(self):
         timeline = self.api.user_timeline()
-
-        ##################################
-        tweets_list = []
-        for tweet in timeline:
-            tweets_list.append(tweet.text)
-        return tweets_list
-        ##################################
-        # Этот код можно существенно сократить с помощью list comprehensions. Оберни все четыре строки в одну
-
-tweety = TwitterBot(configs)
-
-print(tweety.tweets_timeline())
-
-status = input('Enter your tweet: ')
-tweety.update_status(status)
+        return [tweet.text for tweet in timeline]
