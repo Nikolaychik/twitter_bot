@@ -1,4 +1,9 @@
 import tweepy
+import json
+
+
+with open('settings.json') as config_file:
+    configs = json.load(config_file)
 
 
 class TwitterBot:
@@ -36,7 +41,11 @@ class TwitterBot:
 
     def destroy_friendship(self, id_list):
         for curr_id in id_list:
+<<<<<<< HEAD
             return self.api.destroy_friendship(curr_id)
 
 # Test comment
 
+=======
+            return self.api.destroy_friendship(curr_id)
+>>>>>>> 7400c7df9078b1865be357a220d926b86d9d4060

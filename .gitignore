@@ -2,5 +2,13 @@
 /.idea
 .idea/
 .idea/*
+<<<<<<< HEAD
 settings.json
 main.py
+=======
+twitter/configs.py
+settings.json
+main.py
+*.xlsx
+configs.py
+>>>>>>> 7400c7df9078b1865be357a220d926b86d9d4060
