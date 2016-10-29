@@ -18,7 +18,3 @@ class TwitterBot:
 
 # Test comment
 
-<<<<<<< HEAD
-=======
-# Test comment
->>>>>>> 61ed4b6e268d69da5d4b8ca5188fd91eee195198
