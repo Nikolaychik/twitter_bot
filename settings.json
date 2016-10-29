@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "default_settings": {
         "API KEY": "FcuBGT2E2vSusk6rNlSfSUQCc",
         "API Secret": "Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2",
@@ -11,5 +12,11 @@
         "Access token": "792352064491970562-xtdDYYOadkXTie2dTSa1qbgqgho3Sl7",
         "Access token secret": "sZecwxqiUaDeGPVtepR11LtPooSbGIc9i1uqX8WTQjL83"
     }
+=======
+    "API KEY": "UizqZE5NHC9ya3zl1Im7AkW9c",
+    "API Secret": "iIhNp7riufLUsrMRyfiZJZ714vyhda0MQAp1gYDLbDPNqx2nv7",
+    "Access token": "792351992442155008-0V1f6cXeLhC4fIChIMUmJ6Y81iKZriM",
+    "Access token secret": "FTwfFhJqABFWbGRRniYiiXqHJHv0YAuQyTxSYxvG1z9FS"
+>>>>>>> marina
 }
 
