@@ -1,12 +1,9 @@
+import json
 from twitter.api import TwitterBot
-import configparser
 
 
-config = configparser.ConfigParser()
-config.read('example.ini')
-credentials = {}
-for section in config.sections():
-    for key, value in config[section].items():
-        credentials[key] = value
+with open('settings.json') as settings_file:
+    settings = json.loads(settings_file.read())
 
-print(credentials)
+bot = TwitterBot(settings)
+print(bot.tweets_timeline())
