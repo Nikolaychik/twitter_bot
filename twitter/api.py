@@ -1,12 +1,5 @@
 import tweepy
 
-configs = {
-    'API KEY': 'FcuBGT2E2vSusk6rNlSfSUQCc',
-    'API Secret': 'Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2',
-    'Access token': '791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF',
-    'Access token secret': 'yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX'
-}
-
 
 class TwitterBot:
     def __init__(self, credentials):
