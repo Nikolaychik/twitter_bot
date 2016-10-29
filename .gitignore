@@ -2,12 +2,5 @@
 /.idea
 .idea/
 .idea/*
-<<<<<<< HEAD
-twitter/configs.py
 settings.json
 main.py
-=======
-configs.py
-settings.json
-main.py
->>>>>>> marina

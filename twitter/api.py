@@ -12,9 +12,17 @@ class TwitterBot:
     def update_status(self, status):
         self.api.update_status(status)
 
-    def tweets_timeline(self):
-        timeline = self.api.user_timeline()
-        return [[tweet.text, tweet.id] for tweet in timeline]
+    def tweets_timeline(self, cur_id=None):
+        timeline = self.api.user_timeline(id=cur_id)
+        return [(tweet.text, tweet.id) for tweet in timeline]
+
+    def get_msg_ids(self, cur_id=None):
+        timeline = self.api.user_timeline(id=cur_id)
+        return [tweet.id for tweet in timeline]
+
+    def del_msg(self, cur_id):
+        self.api.destroy_status(id=cur_id)
+
 
     def get_ids_followers(self):
         return self.api.followers_ids()
@@ -31,3 +39,4 @@ class TwitterBot:
             return self.api.destroy_friendship(curr_id)
 
 # Test comment
+
