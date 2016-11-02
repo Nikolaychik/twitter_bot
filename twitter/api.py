@@ -1,23 +1,44 @@
 import tweepy
+import json
 
 
-configs = {
-    'API KEY': 'FcuBGT2E2vSusk6rNlSfSUQCc',
-    'API Secret': 'Lp96ATqrEP4rzoUCiZpBw5b7dXFbJoMCONDFwwuDADjL5S43C2',
-    'Access token': '791307771924938752-K1ovtmZGXxasV25GAVsScGu5Mhoc5zF',
-    'Access token secret': 'yY2GcZxokNenu88kCQ7F6vVXwhgHipElsXEomQi0TWGwX'
-}
+with open('settings.json') as config_file:
+    configs = json.load(config_file)
 
-auth = tweepy.OAuthHandler(consumer_key=configs['API KEY'],
-                           consumer_secret=configs['API Secret'])
-auth.set_access_token(configs['Access token'],
-                      configs['Access token secret'])
 
-api = tweepy.API(auth)
+class TwitterBot:
+    def __init__(self, credentials):
+        auth = tweepy.OAuthHandler(consumer_key=credentials['API KEY'],
+                                   consumer_secret=credentials['API Secret'])
+        auth.set_access_token(credentials['Access token'],
+                              credentials['Access token secret'])
+        self.api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print(tweet.text)
+    def update_status(self, status):
+        self.api.update_status(status)
 
-status = "Hello, World!"
-api.update_status(status)
+    def tweets_timeline(self, cur_id=None):
+        timeline = self.api.user_timeline(id=cur_id)
+        return [(tweet.text, tweet.id) for tweet in timeline]
+
+    def get_msg_ids(self, cur_id=None):
+        timeline = self.api.user_timeline(id=cur_id)
+        return [tweet.id for tweet in timeline]
+
+    def del_msg(self, cur_id):
+        self.api.destroy_status(id=cur_id)
+
+    def get_ids_followers(self):
+        return self.api.followers_ids()
+
+    def get_ids_friends(self):
+        return self.api.friends_ids()
+
+    def start_follow_my_followers(self, id_list):
+        for user_id in id_list:
+            return self.api.create_friendship(user_id)
+
+    def destroy_friendship(self, id_list):
+        for curr_id in id_list:
+            return self.api.destroy_friendship(curr_id)
+            # self.api.destroy_friendship(curr_id)
